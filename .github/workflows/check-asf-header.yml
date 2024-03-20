@@ -44,3 +44,11 @@ jobs:
       - uses: actions/checkout@v4
       - name: Check license header
         uses: korandoru/hawkeye@v3
+  
+      - name: Set up Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+  
+      - name: Node Build
+        run: make install-ui-packages ui
