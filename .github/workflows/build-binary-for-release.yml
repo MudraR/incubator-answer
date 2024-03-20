@@ -19,14 +19,11 @@ name: Build Binary For Release
 
 on:
   push:
-    tags:
-      - "v*"
 permissions:
   contents: write
 
 jobs:
   build-goreleaser:
-    if: ${{ github.repository_owner == 'apache' }}
     runs-on: ubuntu-latest
 
     steps:
